@@ -1,7 +1,7 @@
 import React from 'react'
 import './InitialScreen.css'
 
-const index = () => {
+const InitialScreen = () => {
   return (
     <div id='mainDiv'>
         <h1>Calculadora de IMC</h1>
@@ -24,4 +24,4 @@ const index = () => {
   )
 }
 
-export default index
+export default InitialScreen

@@ -1,13 +1,12 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
-import InitialScreen from './components/InitialScreen'
+import Routes from './routes/Routes.jsx'
 
 function App() {
-
   return (
     <>
       <div>
-        <InitialScreen />
+        <Routes/>
       </div>
     </>
   )
