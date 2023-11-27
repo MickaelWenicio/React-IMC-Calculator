@@ -1,7 +1,13 @@
 import React from 'react'
 import './InitialScreen.css'
+import { useNavigate } from 'react-router-dom'
 
 const InitialScreen = () => {
+    const navigate = useNavigate()
+    const handleCalculateClick = () => {
+        
+        navigate('/result');
+    };
   return (
     <div id='mainDiv'>
         <h1>Calculadora de IMC</h1>
@@ -15,7 +21,7 @@ const InitialScreen = () => {
                 <input type="number" placeholder='exemplo: 180cm'/>
             </label>
             <div>
-                <button id='submit' type="submit">CALCULAR</button>
+                <button id='submit' type="button" onClick={handleCalculateClick}>CALCULAR</button>
                 <button id='reset' type="reset">LIMPAR</button>
             </div>
             
