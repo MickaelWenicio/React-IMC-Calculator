@@ -105,3 +105,26 @@ th {
 tr{
     background-color: #0e1635;
 }
+
+/* Desktop STYLE */
+@media (min-width: 600px){
+    #resultDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #151d3d;
+        margin: 0.2em;
+        border-radius: .5em;
+        width: 30vw;
+    }
+
+    #resultDiv button {
+        width: 8em;
+        height: 2em;
+        border-radius: 8em;
+        font-size: 1.2em;
+        transition: all 0.5s ease;
+    }
+    
+}

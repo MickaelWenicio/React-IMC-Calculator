@@ -2,6 +2,8 @@ import React from 'react'
 import './FinalScreen.css'
 
 const FinalScreen = () => {
+
+  
   return (
     <div id='resultDiv'>
       <div id='infos'>
