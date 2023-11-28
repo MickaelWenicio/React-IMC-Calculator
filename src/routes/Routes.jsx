@@ -38,7 +38,7 @@ const AppRoutes = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<InitialScreen weight={weight} height={height} setHeight={setHeight} setWeight={setWeight}/>} />
+        <Route path="/React-IMC-Calculator" element={<InitialScreen weight={weight} height={height} setHeight={setHeight} setWeight={setWeight}/>} />
         <Route path="/result" element={<FinalScreen IMC={IMC} warning={warning} />}/>
       </Routes>
     </Router>

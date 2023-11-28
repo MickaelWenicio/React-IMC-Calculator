@@ -11,7 +11,7 @@ const FinalScreen = ({IMC, warning}) => {
   }
 
   const handleBackClick=()=>{
-    navigate('/');
+    navigate('/React-IMC-Calculator');
   }
 
   return (
