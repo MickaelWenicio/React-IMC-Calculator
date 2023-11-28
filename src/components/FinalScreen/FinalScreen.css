@@ -29,7 +29,7 @@
 
 #resultDiv span {
     color: #fff;
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin-top: 1em;
 }
 
@@ -48,7 +48,7 @@
     text-align: center;
 }
 
-#resultDiv button {
+#resultDiv .showTable {
     color: white;
     background-color: transparent;
     border: none;
@@ -63,7 +63,7 @@
     transition: all 0.5s ease;
 }
 
-#resultDiv button:hover {
+#resultDiv .showTable:hover {
     color: white;
     background-color: #0e1635;
     border: none;
@@ -75,12 +75,28 @@
     border-radius: 8em;
 }
 
-#tableDiv{
+.tableDiv{
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 95%;
     margin-bottom: 1em;
     padding: .5em;
+}
+
+#resultDiv .Back{
+    background-color: rgb(255, 66, 52);
+    color: #fff;
+    width: 50%;
+    height: 3em;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 1em;
+}
+
+.hiddedDiv{
+    display: none;
 }
 
 

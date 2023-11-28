@@ -1,18 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {useNavigate} from 'react-router-dom'
 import './FinalScreen.css'
 
-const FinalScreen = () => {
+const FinalScreen = ({IMC, warning}) => {
 
-  
+  const navigate = useNavigate()
+  const [buttonShow, setButtonShow] = useState(false)
+  const handleClick =()=>{
+    setButtonShow(!buttonShow)
+  }
+
+  const handleBackClick=()=>{
+    navigate('/');
+  }
+
   return (
     <div id='resultDiv'>
       <div id='infos'>
         <h1>Resultado:</h1>
-        <p>14.53</p>
-        <span>Você está acima do peso</span>
-        <button>Conferir tabela</button>
+        <p>{IMC}</p>
+        <span>Você está {warning}</span>
+        <button onClick={handleClick} className='showTable'>Conferir tabela</button>
       </div>
-      <div id='tableDiv'>
+      <div className={buttonShow ? "tableDiv" : "hiddedDiv"}>
         <table>
           <thead>
             <tr>
@@ -22,19 +32,19 @@ const FinalScreen = () => {
           </thead>
           <tbody>
             <tr>
-              <td>Menor que 18,5</td>
+              <td>Menor que 18.5</td>
               <td>Baixo peso</td>
             </tr>
             <tr>
-              <td>De 18,5 a 24,9</td>
+              <td>De 18.5 a 24.9</td>
               <td>Peso normal</td>
             </tr>
             <tr>
-              <td>De 25 a 29,9</td>
+              <td>De 25 a 29.9</td>
               <td>Sobrepeso</td>
             </tr>
             <tr>
-              <td>De 30 a 34,9</td>
+              <td>De 30 a 34.9</td>
               <td>Obesidade grau I</td>
             </tr>
             <tr>
@@ -48,6 +58,7 @@ const FinalScreen = () => {
           </tbody>
         </table>
       </div>
+      <button onClick={handleBackClick} className='Back'>VOLTAR</button>
     </div>
   )
 }
