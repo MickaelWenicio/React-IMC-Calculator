@@ -2,7 +2,7 @@ import React from 'react'
 import './InitialScreen.css'
 import { useNavigate } from 'react-router-dom'
 
-const InitialScreen = ({weight, height, setHeight, setWeight, }) => {
+const InitialScreen = ({weight, height, setHeight, setWeight, cleanForms}) => {
     const navigate = useNavigate()
 
     //FUNCTIONS
@@ -30,7 +30,7 @@ const InitialScreen = ({weight, height, setHeight, setWeight, }) => {
             </label>
             <div>
                 <button id='submit' type="button" onClick={handleCalculateClick}>CALCULAR</button>
-                <button id='reset' type="reset">LIMPAR</button>
+                <button id='reset' type="reset" onClick={()=>{cleanForms()}}>LIMPAR</button>
             </div>
             
         </form>

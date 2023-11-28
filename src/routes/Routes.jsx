@@ -8,6 +8,14 @@ const AppRoutes = () => {
   const [height, setHeight]= useState('')
   const [warning, setWarning]= useState('')
   const [IMC, setIMC]=useState(0)
+  
+  const cleanForms = ()=>{
+    setWeight('');
+    setHeight('');
+    if (callback && typeof callback === 'function') {
+      callback();
+    }
+  }
 
 
 
@@ -38,7 +46,7 @@ const AppRoutes = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/React-IMC-Calculator" element={<InitialScreen weight={weight} height={height} setHeight={setHeight} setWeight={setWeight}/>} />
+        <Route path="/React-IMC-Calculator" element={<InitialScreen weight={weight} height={height} setHeight={setHeight} setWeight={setWeight} cleanForms={cleanForms}/>} />
         <Route path="/result" element={<FinalScreen IMC={IMC} warning={warning} />}/>
       </Routes>
     </Router>
